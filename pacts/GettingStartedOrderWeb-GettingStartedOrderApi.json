@@ -17,6 +17,7 @@
       "response": {
         "body": [
           {
+            "discount": 0.4,
             "id": 1,
             "items": [
               {
@@ -24,7 +25,8 @@
                 "quantity": 2,
                 "value": 100
               }
-            ]
+            ],
+            "title": "My Order"
           }
         ],
         "headers": {
@@ -51,7 +53,8 @@
               ]
             }
           },
-          "header": {}
+          "header": {},
+          "status": {}
         },
         "status": 200
       }
@@ -62,8 +65,8 @@
       "version": "12.1.0"
     },
     "pactRust": {
-      "ffi": "0.4.7",
-      "models": "1.1.9"
+      "ffi": "0.4.16",
+      "models": "1.1.19"
     },
     "pactSpecification": {
       "version": "3.0.0"

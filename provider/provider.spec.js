@@ -28,6 +28,7 @@ describe("Pact Verification", () => {
     // The PACT_URL can either be a path to a local file
     // or one from a Pact Broker
     if (process.env.PACT_URL) {
+      console.log(`Having a local pact file`);
       opts = {
         ...opts,
         pactUrls: [process.env.PACT_URL]
@@ -35,6 +36,9 @@ describe("Pact Verification", () => {
       // as a convenience, we have provided a path to the example consumer/provider pact
       // generated when running npm run test:consumer
     } else if (!process.env.PACT_URL && !process.env.PACT_BROKER_BASE_URL) {
+      console.log(`No local pact file, neither broker url`);
+      console.log(`local pact file ${process.env.PACT_URL}`);
+      console.log(`broker pact url ${process.env.PACT_BROKER_BASE_URL}`);
       opts = {
         ...opts,
         pactUrls: [pactFile]
@@ -43,6 +47,7 @@ describe("Pact Verification", () => {
 
     // If we have a broker, then some more options are relevant
     if (process.env.PACT_BROKER_BASE_URL) {
+      console.log(`Having a broker pact file`);
       opts = {
         ...opts,
         // we need to know where our broker is located

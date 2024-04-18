@@ -7,7 +7,13 @@ const fetchOrders = () => {
   return request.get(`http://${hostname}:${process.env.API_PORT}/orders`).then(
     (res) => {
       return res.body.reduce((acc, o) => {
-        acc.push(new Order(o.id, o.items));
+        acc.push(
+          new Order(
+            o.title,
+            o.discount,
+            o.items
+          )
+        );
         return acc;
       }, []);
     },
