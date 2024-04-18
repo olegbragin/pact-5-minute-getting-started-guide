@@ -54,6 +54,7 @@ describe("Pact with Order API", () => {
           process.env.API_PORT = mockserver.port;
           return expect(fetchOrders()).to.eventually.have.deep.members([
             new Order(
+              orderProperties.id, 
               orderProperties.title,
               orderProperties.discount,
               [itemProperties]
