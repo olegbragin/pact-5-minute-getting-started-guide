@@ -22,7 +22,6 @@ describe("Pact with Order API", () => {
     };
 
     const orderProperties = {
-      id: 1,
       items: eachLike(itemProperties),
     };
 
