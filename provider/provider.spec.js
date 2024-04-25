@@ -57,7 +57,7 @@ describe("Pact Verification", () => {
         providerVersion: process.env.GIT_COMMIT,
         providerVersionBranch: process.env.GIT_BRANCH,
         // we only want to publish pacts if we are in CI
-        publishVerificationResult: !!process.env.CI ?? false,
+        publishVerificationResult: true,
       }
 
 
@@ -120,7 +120,7 @@ describe("Pact Verification", () => {
         console.log(output);
       })
       .catch((e) => {
-        console.error("Pact verification failed :(", e);
+        throw new Error("Pact verification failed :(" + e.message)
       });
   });
 });

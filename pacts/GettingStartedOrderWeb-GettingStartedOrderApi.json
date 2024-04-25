@@ -65,7 +65,7 @@
       "version": "12.1.0"
     },
     "pactRust": {
-      "ffi": "0.4.16",
+      "ffi": "0.4.19",
       "models": "1.1.19"
     },
     "pactSpecification": {
