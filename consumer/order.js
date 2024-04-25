@@ -1,7 +1,5 @@
 class Order {
-  constructor(id, title, discount, items) {
-    this.title = title
-    this.discount = discount
+  constructor(items) {
     this.items = items;
   }
 
