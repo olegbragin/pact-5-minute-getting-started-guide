@@ -11,7 +11,7 @@ class Order {
   }
 
   toString() {
-    return `Order ${this.id}, Total: ${this.total()}`;
+    return `Order Total: ${this.total()}`;
   }
 }
 
