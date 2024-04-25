@@ -17,6 +17,7 @@
       "response": {
         "body": [
           {
+            "discount": 0.4,
             "id": 1,
             "items": [
               {
@@ -24,7 +25,8 @@
                 "quantity": 2,
                 "value": 100
               }
-            ]
+            ],
+            "title": "My Order"
           }
         ],
         "headers": {

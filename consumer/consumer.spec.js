@@ -23,6 +23,8 @@ describe("Pact with Order API", () => {
 
     const orderProperties = {
       id: 1,
+      title: 'My Order',
+      discount: 0.4,
       items: eachLike(itemProperties),
     };
 
@@ -52,6 +54,9 @@ describe("Pact with Order API", () => {
           process.env.API_PORT = mockserver.port;
           return expect(fetchOrders()).to.eventually.have.deep.members([
             new Order(
+              orderProperties.id, 
+              orderProperties.title,
+              orderProperties.discount,
               [itemProperties]
             ),
           ]);

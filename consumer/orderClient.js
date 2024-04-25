@@ -9,6 +9,9 @@ const fetchOrders = () => {
       return res.body.reduce((acc, o) => {
         acc.push(
           new Order(
+            o.id, 
+            o.title,
+            o.discount,
             o.items
           )
         );
